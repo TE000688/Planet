@@ -1,5 +1,6 @@
 """Planet chatbot logic - rule-based responses about planets and the solar system."""
 
+import random
 import re
 
 PLANET_DATA = {
@@ -164,7 +165,6 @@ def get_response(user_message: str) -> str:
 
     # Solar system fact
     if "solar system" in lower and re.search(r"\bfact\b", lower):
-        import random
         return random.choice(SOLAR_SYSTEM_FACTS)
 
     planet = _find_planet(lower)
@@ -172,7 +172,6 @@ def get_response(user_message: str) -> str:
     if planet is None:
         # Generic solar system / space questions
         if "solar system" in lower:
-            import random
             return random.choice(SOLAR_SYSTEM_FACTS)
         if "planet" in lower:
             return (
