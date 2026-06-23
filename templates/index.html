@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Planet Explorer Chatbot</title>
+  <link rel="stylesheet" href="/static/css/style.css" />
+</head>
+<body>
+  <div class="app">
+    <header class="app__header">
+      <span class="app__logo">🪐</span>
+      <div>
+        <h1 class="app__title">Planet Explorer</h1>
+        <p class="app__subtitle">Your solar system guide</p>
+      </div>
+    </header>
+
+    <main class="chat" id="chat-window" aria-live="polite" aria-label="Chat messages">
+      <div class="message message--bot">
+        <span class="message__avatar">🤖</span>
+        <div class="message__bubble">
+          Hello! 👋 Welcome to the Planet Explorer chatbot!
+          I can answer questions about the planets in our solar system.
+          Type <strong>help</strong> to see what I can do.
+        </div>
+      </div>
+    </main>
+
+    <footer class="input-bar">
+      <form class="input-bar__form" id="chat-form" autocomplete="off">
+        <input
+          class="input-bar__field"
+          id="user-input"
+          type="text"
+          placeholder="Ask me about a planet…"
+          aria-label="Chat message"
+          maxlength="300"
+          required
+        />
+        <button class="input-bar__send" type="submit" aria-label="Send message">
+          Send ➤
+        </button>
+      </form>
+    </footer>
+  </div>
+
+  <script src="/static/js/chat.js"></script>
+</body>
+</html>
